@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap" rel="stylesheet">
+  <title>Flávio Barroso</title>
+</head>
+
+<body>
+  <div class="caixa-principal">
+    <nav>
+      <h2 class="portfolio">Portfo<span>lio</span></h2>
+
+      <ul>
+        <li><a class="link-menu">Home</a></li>
+        <li><a class="link-menu" href="#sobre">Sobre</a></li>
+        <li><a class="link-menu" href="#projetos-id">Projetos</a></li>
+        <li><a class="link-menu" href="#fale-comigo">Fale Comigo</a></li>
+      </ul>
+
+      <!-- Ícone Hambúrguer -->
+      <div class="menu-hamburguer" id="hamburguer">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Botão Dark Mode -->
+      <button id="toggle-dark">🌙</button>
+    </nav>
+
+    <div class="meu-nome">
+      <h1>Flávio <span>Barroso</span></h1>
+      <h3>Programador Front End</h3>
+    </div>
+  </div>
+
+  <section id="sobre">
+    <img src="./img/Flavio.jpeg"
+      alt="Imagem de um homem negro, cabelo curto, de perfil, com terno preto e gravata rosê">
+    <div>
+      <h2>Sobre mim</h2>
+      <p>Sou graduado em Eduação Física, em Análise e Desenvolvimento de Sistemas, pós-graduado em Defesa e Segurança Cibernértica e concluindo outra pós em Gestão de Riscos e Cibersegurança, técnico  em Programador e Desenvolvedor Web, tenho um pouco de experiência criando websites em HTML,
+        CSS e JavaScript</p>
+      <button>Entre em contato</button>
+    </div>
+  </section>
+
+  <div class="projetos" id="projetos-id">
+    <h2>Principais Projetos</h2>
+
+    <div class="card-projetos">
+      <div class="card">
+        <img src="./img/Jogo.jpg" alt="Imagem do logo oficial da Netflix">
+        <h5>Acerte o Alvo</h5>
+        <p>Um jogo simples chamado "Acerte o Alvo", feito só com HTML, CSS e JavaScript — e com layout totalmente responsivo.</p>
+        <a href="https://github.com/fzlmd97/Acerte-o-Alvo.git" target="_blank">Ver Projeto</a>
+      </div>
+
+      <div class="card">
+        <img src="./img/python.png" alt="Imagem da logo de Python em formato png">
+        <h5>Sistema de Gerenciamento de Conteúdo Digital</h5>
+        <p>Este sistema permite que o usuário cadastre, visualize, pesquise e remova diferentes tipos de conteúdo digital, como Filmes, Livros e Músicas.</p>
+        <a href="https://github.com/fzlmd97/Sistema-de-Gerenciamento-de-Conteudo-Digital.git" target="_blank">Ver Projeto</a>
+      </div>
+
+      <div class="card">
+        <img src="./img/IMC.png" alt="Imagem de cálculo IMC em formato png">
+        <h5>Cálculo IMC</h5>
+        <p>Aplicação simples de cálculo de Índice de Massa Corporal com JavaScript, HTML e CSS.</p>
+        <a href="https://github.com/fzlmd97/C-lculoIMC.git" target="_blank">Ver Projeto</a>
+      </div>
+    </div>
+  </div>
+
+  <footer id="fale-comigo">
+    <h5>Flávio Barroso</h5>
+    <p>Para mais informações</p>
+
+    <div class="social">
+      <a href="https://www.linkedin.com/in/fl%C3%A1vio-barroso-da-silva-2b1061117/" target="_blank"><img
+          src="./img/linkedin.png" alt="Logo do linkedin"></a>
+      <a href="tel:+5562991152065"><img src="./img/fone.png" alt="Logo do telefone"></a>
+    </div>
+  </footer>
+
+  <script>
+    // Toggle Dark Mode
+    const toggleDark = document.getElementById("toggle-dark");
+    toggleDark.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      toggleDark.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+    });
+
+    // Toggle Menu Hambúrguer
+    const hamburguer = document.getElementById("hamburguer");
+    const navMenu = document.querySelector("nav ul");
+
+    hamburguer.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+    });
+  </script>
+</body>
+
+</html>
